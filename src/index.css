@@ -10,3 +10,6 @@
 *{
   font-family: "Vazir";
 }
+body{
+  @apply min-h-screen;
+}

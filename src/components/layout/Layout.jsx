@@ -1,21 +1,24 @@
-import React,{createContext} from 'react'
+import React, { createContext } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar';
 import SideBar from './SideBar';
 import useSideBar from '../../hooks/useSideBar';
 
-export const Context=createContext()
+export const Context = createContext()
 
 const Layout = () => {
-  const {open,setOpen}=useSideBar()
-  
+  const { open, setOpen } = useSideBar()
+
   return (
-    <div className=''>
-      <Context.Provider value={{open,setOpen}}>
+    <div>
+      <Context.Provider value={{ open, setOpen }}>
         <Navbar />
-      <SideBar />
+        <div className='flex items-start'>
+          <SideBar />
+          <Outlet />
+        </div>
       </Context.Provider>
-      <Outlet />
+      
     </div>
   )
 }

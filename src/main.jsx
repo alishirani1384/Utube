@@ -5,6 +5,7 @@ import 'tippy.js/dist/tippy.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import Home from './pages/Home';
+import ErrorPage from './pages/ErrorPage';
 
 
 const router = createBrowserRouter([
@@ -14,7 +15,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element:<Home/>
+        element: <Home />,
+      },
+      {
+        path: "*",
+        element:<ErrorPage/>
       }
     ]
    }
