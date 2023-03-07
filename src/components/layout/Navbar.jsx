@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className='py-2 relative flex items-center shadow-xl'>
+    <nav className='py-2 relative dark:bg-gray-900 flex items-center shadow-xl'>
       <div className='flex-col w-full justify-between items-center mx-3'>
         <div className='flex justify-between items-center'>
           <div className='flex items-center gap-2'>

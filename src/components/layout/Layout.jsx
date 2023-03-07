@@ -10,13 +10,12 @@ const Layout = () => {
   const {open,setOpen}=useSideBar()
   
   return (
-    <div>
+    <div className=''>
       <Context.Provider value={{open,setOpen}}>
         <Navbar />
       <SideBar />
       </Context.Provider>
       <Outlet />
-      <h1>footer</h1>
     </div>
   )
 }
