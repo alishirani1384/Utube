@@ -1,11 +1,15 @@
 import React from 'react'
 
-const VideoCard = ({ thumbnail, title }) => {
-    console.log(thumbnail);
+const VideoCard = ({title,video,date }) => {
+
     return (
-      <div>
-            <img src={thumbnail} alt="" />   
-            <p>{title}</p>     
+      <div className='flex flex-col rounded-lg p-2 shadow-lg gap-1'>  
+        <iframe src={video} frameborder="0"></iframe>
+        <div className='dark:text-white'>
+          <small>{date}</small>
+          <p>{title}</p>  
+        </div>
+               
       </div>
     
   )

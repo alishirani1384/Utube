@@ -11,13 +11,14 @@ const Home = () => {
     queryKey: "popular",
     queryFn: getMostPopular,
   });
-  const { open, setOpen } = useContext(Context);
+  
+  console.log(data?.mostviewedvideos);
   if (isLoading) return <div>loading...</div>;
   return (
-    <main className='grid overflow-auto w-full dark:bg-gray-700'>
+    <main className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 m-10 overflow-auto w-full dark:bg-gray-700'>
       {
-        data?.record?.mostviewedvideos.map(v => {
-         return <VideoCard key={v.id} title={v.title} thumbnail={v.small_poster} />
+        data.mostviewedvideos.map(v => {
+         return <VideoCard key={v.id} title={v.title} video={v.frame} date={v.sdate} />
         })
           }
     </main>

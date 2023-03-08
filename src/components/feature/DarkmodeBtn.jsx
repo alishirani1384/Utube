@@ -6,6 +6,7 @@ const DarkmodeBtn = () => {
     function setDarkMode() {
         setToggle(!toggle);
         document.documentElement.classList.toggle("dark");
+        document.body.classList.toggle("bg-gray-700");
     }
     return (
         
