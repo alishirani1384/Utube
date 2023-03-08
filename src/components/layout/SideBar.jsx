@@ -7,11 +7,12 @@ import { MoonIcon } from '@heroicons/react/24/outline';
 
 
 const SideBar = () => {
-    const { open } = useContext(Context);
+    const { open,setOpen } = useContext(Context);
    
     return (
         open && (
-            <div className='shadow-2xl bg-white dark:bg-gray-900 lg:bg-[rgb(111, 114, 133)] absolute top-0  w-1/2 h-screen z-10 lg:static lg:w-1/4 xl:w-1/6'>
+            <>
+            <div className='shadow-2xl bg-white dark:bg-gray-900 lg:bg-[rgb(111, 114, 133)] fixed top-0  w-1/2 h-screen z-10 lg:sticky lg:w-1/4 xl:w-1/6'>
                 <div className='flex flex-col gap-2 p-2 mx-3'>
                     <div className='lg:hidden'>
                        <MenuBtn/> 
@@ -53,7 +54,9 @@ const SideBar = () => {
                         <DarkmodeBtn/>
                     </div> 
                 </div>
-            </div>
+                </div>
+                <div onClick={()=>setOpen(!open)} className='bg-black opacity-50 fixed top-0 bottom-0 left-0 w-1/2 lg:hidden'></div>
+            </>
       )
   )
 }
