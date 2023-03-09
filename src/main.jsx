@@ -7,6 +7,7 @@ import Layout from './components/layout/Layout'
 import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import { QueryClient, QueryClientProvider } from 'react-query';
+import VideoPage from './pages/VideoPage';
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+      {
+        path: "video/:id",
+        element:<VideoPage/>
+      }
+      ,
       {
         path: "*",
         element:<ErrorPage/>
