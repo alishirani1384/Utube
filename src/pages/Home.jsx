@@ -12,8 +12,6 @@ const Home = () => {
     queryKey: "popular",
     queryFn: getMostPopular,
   });
-  // console.log(isLoading);
-  console.log(data?.items);
   if (isLoading) return <Loading />;
   return (
     <main className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:m-10 my-10 overflow-auto w-full dark:bg-gray-700'>

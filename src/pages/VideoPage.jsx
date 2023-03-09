@@ -13,7 +13,7 @@ const VideoPage = () => {
         url: 'https://youtube-v31.p.rapidapi.com/videos',
         params: { part: 'contentDetails,snippet,statistics', id: id },
         headers: {
-            'X-RapidAPI-Key': import.meta.env.REACT_APP_API_KEY,
+            'X-RapidAPI-Key': import.meta.env.VITE_SOME_KEY,
             'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
         }
     };
