@@ -30,7 +30,9 @@ const VideoPage = () => {
 
   return (
       <div className='w-full flex flex-col gap-2'>
-          <LiteYoutubeEmbed id={id}/>
+          <div className='lg:w-5/6 lg:mx-auto lg:mt-10'>
+             <LiteYoutubeEmbed id={id}/> 
+          </div>
           <div className='p-2 gap-5'>
               <b>{data?.items[0].snippet.title}</b>
               <p>{data?.items[0].snippet.description}</p>
