@@ -1,12 +1,12 @@
 import React from 'react'
 
-const VideoCard = ({title,video,date }) => {
+const VideoCard = ({title,thumbnail,name }) => {
 
     return (
       <div className='flex flex-col rounded-lg p-2 shadow-lg gap-1'>  
-        <iframe src={video} frameborder="0"></iframe>
+        <img src={thumbnail} alt={title} loading='lazy'  className='cursor-pointer'/>
         <div className='dark:text-white'>
-          <small>{date}</small>
+          <small>{name}</small>
           <p>{title}</p>  
         </div>
                
