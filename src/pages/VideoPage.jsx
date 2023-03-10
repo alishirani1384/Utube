@@ -25,22 +25,20 @@ const VideoPage = () => {
             console.error(error);
         }
     }
-    const { data, isLoading } = useQuery({queryKey:"video", queryFn : getVideo});
+    const { data, isLoading } = useQuery({ queryKey: "video", queryFn: getVideo });
     console.log(data);
 
-  return (
-      <div className='w-full flex flex-col gap-2'>
-          <div className='lg:w-5/6 lg:mx-auto lg:mt-10'>
-             <LiteYoutubeEmbed id={id}/> 
-          </div>
-          <div className='p-2 gap-5'>
-              <b>{data?.items[0].snippet.title}</b>
-              <p>{data?.items[0].snippet.description}</p>
-          </div>
-
-          
-    </div>
-  )
+    return (
+        <div className='w-full flex flex-col gap-2'>
+            <div className='lg:w-5/6 lg:mx-auto lg:mt-10'>
+                <LiteYoutubeEmbed id={id} />
+            </div>
+            <div className='p-2 gap-5 lg:w-5/6 lg:mx-auto'>
+                <b>{data?.items[0].snippet.title}</b>
+                <p className='whitespace-pre-wrap overflow-x-clip'>{data?.items[0].snippet.description}</p>
+            </div>
+        </div>
+    )
 }
 
 export default VideoPage
