@@ -36,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "*",
         element:<ErrorPage/>
+      },
+      {
+        path: "search/:slug",
+        element:<SearchPage/>
       }
     ]
    }
