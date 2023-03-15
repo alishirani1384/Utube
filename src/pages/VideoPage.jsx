@@ -17,6 +17,7 @@ const VideoPage = () => {
             'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
         }
     };
+    
     async function getVideo() {
         try {
             const response = await axios.request(options);

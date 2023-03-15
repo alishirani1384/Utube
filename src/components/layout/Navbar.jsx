@@ -21,10 +21,14 @@ const Navbar = () => {
           </div>
           <div className='flex items-center gap-3'>
             <Tippy className='sm:hidden' content="ورود و ثبت نام">
-              <SignBtn />
+              <Link to={"/login"}>
+                <SignBtn />
+              </Link>
             </Tippy>
             <Tippy className='sm:hidden' content="بارگذاری ویدیو">
+              <Link to={"/upload"}>
               <UploadBtn />
+              </Link>
             </Tippy>
           </div>
         </div>
