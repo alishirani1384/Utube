@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <title>UTUBE</title>
+        <style type="text/css">
+            @font-face {
+            font-family: "Vazir";
+            src: url("/Vazir.ttf");
+            }
+            *{
+                font-family: "Vazir";
+                padding: 0;
+                margin: 0;
+            }
+            body{
+                min-height: 100vh;
+            }
+            nav{
+                height: 80px;
+                --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+                --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+                box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+            .container{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                margin-inline: 1.5rem;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                list-style: none;
+            }
+            li{
+                cursor: pointer;
+            }
+            button div{
+                width: 30px;
+                height: 2px;
+                background-color: black;
+                border-radius: 50%;
+            }
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                border: none;
+                flex-direction: column;
+                gap: .4rem;
+                cursor: pointer;
+            }
+            h1{
+                text-align: center;
+                margin-top: 5rem;
+                margin-inline: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+       <nav>
+        <div class="container">
+            <ul>
+                <li>ورود و ثبت نام</li>
+                <li> آپلود ویدیو</li>
+            </ul>
+            <button>
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
+       </nav>
+       <main>
+        <h1>
+            لطفا اینترنت خود را روشن کنید
+        </h1>
+       </main>
+    </body>
+</html>
